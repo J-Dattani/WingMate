@@ -20,6 +20,11 @@
     />
     <title>Wingmate -  Dashboard</title>
     <style>
+      body
+      {
+          scrollbar-width:thick;
+            scrollbar-color: #1b8492c7 #f8f9fa;
+      }
       .navbar .nav-link {
         color: #000 !important;
         text-decoration: none;
@@ -308,6 +313,21 @@
           z-index: -1;
         }
       }
+
+        /* Webkit browsers (Chrome, Safari) */
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f8f9fa;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #1b8492c7;
+            border-radius: 10px;
+            border: 2px solid #f8f9fa;
+        }
     </style>
   </head>
   <body>
@@ -350,7 +370,7 @@
               <a class="nav-link py-3 py-md-2" href="./User/complaints.html">Complaints</a>
             </li>
             <li class="nav-item ms-5">
-              <a class="nav-link" href="#">Vehicle Entry</a>
+              <a class="nav-link" href="./User/vehicle-entry.html">Vehicle Entry</a>
             </li>
             <li class="nav-item ms-5">
               <a class="nav-link" href="./User/dtc.html">Direct To Committee</a>
@@ -396,7 +416,7 @@
           </div>
           <!-- Button aligned but not stuck to extreme right -->
           <div class="col-md-4 text-center text-md-end">
-            <a href="./raise-complaint.html" class="btn btn-outline-dark px-4 py-2">
+            <a href="../User/raise-complaint.html" class="btn btn-outline-dark px-4 py-2">
               Raise Complaint
             </a>
           </div>

@@ -20,6 +20,27 @@
     />
     <title>Wingmate - Complaints</title>
     <style>
+          body{
+        
+          scrollbar-width:thick;
+            scrollbar-color: #1b8492c7 #f8f9fa;
+      }
+
+
+     /* Webkit browsers (Chrome, Safari) */
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f8f9fa;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #1b8492c7;
+            border-radius: 10px;
+            border: 2px solid #f8f9fa;
+        }
       .navbar .nav-link {
         color: #000 !important;
         text-decoration: none;
@@ -181,9 +202,17 @@
             background-color: #007bff;
         }
 
-        /* Responsive Table CSS */
-        @media (max-width: 768px) {
-            .table-custom thead {
+      /* Responsive adjustments for smaller screens */
+      @media (max-width: 768px) {
+        .footer-section {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+        .footer-section ul {
+          display: inline-block;
+          padding: 0;
+        }
+        .table-custom thead {
                 display: none;
             }
 
@@ -215,23 +244,7 @@
                 font-weight: bold;
                 color: #555;
             }
-        }
-        
-
-      /* Responsive adjustments for smaller screens */
-      @media (max-width: 768px) {
-        .footer-section {
-          text-align: center;
-          margin-bottom: 30px;
-        }
-        .footer-section ul {
-          display: inline-block;
-          padding: 0;
-        }
-      }
-      /* --- Mobile Fixes --- */
-      @media (max-width: 768px) {
-         .navbar-nav .nav-link {
+             .navbar-nav .nav-link {
     padding-top: 15px;
     padding-bottom: 15px;
   }
@@ -241,7 +254,9 @@
           height: 80vw;
           z-index: -1;
         }
-      }
+
+        }
+ 
     </style>
   </head>
   <body>
@@ -285,7 +300,7 @@
               <a class="nav-link py-3 py-md-2 active" href="./User/complaints.html">Complaints</a>
             </li>
             <li class="nav-item ms-5">
-              <a class="nav-link" href=".vehicle-entry.html">Vehicle Entry</a>
+              <a class="nav-link" href="./vehicle-entry.html">Vehicle Entry</a>
             </li>
             <li class="nav-item ms-5">
               <a class="nav-link" href="./dtc.html">Direct To Committee</a>
@@ -301,7 +316,7 @@
         
         <!-- Main Content Section -->
         <main class="d-flex flex-column align-items-center justify-content-center p-4">
-            <h1 class="text-center mb-5">Complaints</h1>
+            <h1 class="text-center mb-5" style="color: #1b8492c7;">Complaints</h1>
             
             <div class="table-responsive">
                 <table class="table table-bordered table-striped rounded-4 overflow-hidden shadow-lg table-custom">

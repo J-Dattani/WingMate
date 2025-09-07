@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/jpeg" href="./ico/Wingmate.ico" />
+    <link rel="icon" type="image/jpeg" href="../ico/Wingmate.ico" />
 
     <!-- Bootstrap Icons -->
     <link
@@ -20,6 +20,27 @@
     />
     <title>Wingmate - Direct to Committee</title>
     <style>
+          body{
+        
+          scrollbar-width:thick;
+            scrollbar-color: #1b8492c7 #f8f9fa;
+      }
+
+
+     /* Webkit browsers (Chrome, Safari) */
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f8f9fa;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #1b8492c7;
+            border-radius: 10px;
+            border: 2px solid #f8f9fa;
+        }
       .navbar .nav-link {
         color: #000 !important;
         text-decoration: none;
@@ -216,13 +237,13 @@
               <a class="nav-link py-3 py-md-2" href="./complaints.html">Complaints</a>
             </li>
             <li class="nav-item ms-5">
-              <a class="nav-link" href="#">Vehicle Entry</a>
+              <a class="nav-link" href="./vehicle-entry.html">Vehicle Entry</a>
             </li>
             <li class="nav-item ms-5">
-              <a class="nav-link active" href="">Direct To Committee</a>
+              <a class="nav-link active" href="#">Direct To Committee</a>
             </li>
             <li class="nav-item ms-5">
-              <a class="nav-link" href="./user/login.html">Logout</a>
+              <a class="nav-link" href="./login.html">Logout</a>
             </li>
           </ul>
         </div>
@@ -241,7 +262,7 @@
                     <div class="text-center">
                         <p style="color: #921b1bac;"><sup>*</sup>Your query will be submitted for review and a member of the committee will contact you shortly.</p>
                     
-                        <button type="submit" class="btn btn-submit">Submit Query</button>
+                        <a href="../index.html" type="submit" class="btn btn-submit">Submit Query</a>
                     </div>
                 </div>
             </div>
