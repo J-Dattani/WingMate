@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+      <link rel="icon" type="image/jpeg" href="../ico/Wingmate.ico" />
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        
+        body {
+            background-color: #f8f9fa; /* A light grey background color */
+        }
+        .btn-login {
+            background-color: #1b8492c7; /* Bootstrap primary color */
+            color: white !important;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .btn-login:hover {
+            background-color: #1b8492e5; /* Darker shade on hover */
+            color: white;
+            cursor: pointer;
+        }
+/* Custom CSS to change the active border color to green */
+        .form-control:focus {
+            border-color: #1b8492; /* Green border */
+            box-shadow: 0 0 0 0.25rem #1b849259; /* Green glow */
+            outline: 0;
+        }
+        .login-card-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+          .radial-pattern-left {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 450px;
+            height: 450px;
+            background-color: transparent;
+            background-image: radial-gradient(
+                circle at 0% 100%,
+                #1b849261 10%,
+                #3736ab00 11%,
+                transparent 20%,
+                rgb(195 224 202 / 0%) 21%
+            ),
+            radial-gradient(
+                circle at 0% 100%,
+                #1b849234 30%,
+                #78c68a1b 31%,
+                transparent 40%,
+                rgb(195 224 202 / 0%) 41%
+            ),
+            radial-gradient(
+                circle at 0% 100%,
+                #1b849214 50%,
+                transparent 51%,
+                #3d121200 60%,
+                rgb(255 255 255 / 0%) 61%
+            );
+        }
+
+    </style>
+</head>
+<body>
+    <div class="radial-pattern-left"></div>
+    <div class="login-card-container">
+        <!-- The main card that holds the login form -->
+        <div class="card p-4 shadow-lg rounded-4" style="max-width: 500px; width: 100%;">
+            <div class="card-body">
+                <!-- Logo placeholder -->
+                <div class="text-center">
+                  
+                        <img
+            src="../ico/Wingmate_transparent.png"
+            alt="Logo"
+            width="130"
+            height="130"
+          />
+                    
+                </div>
+
+                <!-- Login heading -->
+                <h3 class="text-center mb-4">Login</h3>
+
+                <!-- Username form group -->
+                <div class="mb-3">
+                    <label for="usernameInput" class="form-label">Username</label>
+                    <input type="text" class="form-control rounded-2" id="usernameInput" placeholder="Enter Username">
+                </div>
+
+                <!-- Password form group -->
+                <div class="mb-4">
+                    <label for="passwordInput" class="form-label">Password</label>
+                    <input type="password" class="form-control rounded-2" id="passwordInput" placeholder="Enter Password">
+                    <a href="./forgot.html" class="form-text text-end d-block mt-2" style="color: #1b8492;">Forgot Password?</a>
+                </div>
+
+                <!-- Login button -->
+                <div class="btn-login d-grid mb-3">
+                    <a href="../index.html" type="submit" class="btn rounded-2" style="color: white;">Login</a>
+                </div>
+
+                <!-- Register link -->
+                <div class="text-center mt-4">
+                    <p class="mb-0">Don't have Account?</p>
+                    <a style="color: #1b8492;" href="./register.html" class="text-decoration-none fw-bold">Register</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS CDN (optional, but good practice to include for certain components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
