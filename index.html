@@ -503,6 +503,16 @@
       </section>
     </main>
 
+    <!-- Toast container -->
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+      <div class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body"></div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+
     <footer class="site-footer mt-5 pt-5 pb-3">
       <div class="container">
         <div class="row">
@@ -559,5 +569,23 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // Display toast if URL has toast param
+      (function(){
+        var urlParams = new URLSearchParams(window.location.search);
+        if(urlParams.has('toast') && urlParams.get('toast') === '1'){
+          var msg = urlParams.get('msg') || 'Operation completed successfully.';
+          var toastEl = document.querySelector('.toast');
+          if(toastEl){
+            var toastBody = toastEl.querySelector('.toast-body');
+            if(toastBody){
+              toastBody.textContent = msg;
+            }
+            var toast = new bootstrap.Toast(toastEl);
+            toast.show();
+          }
+        }
+      })();
+    </script>
   </body>
 </html>

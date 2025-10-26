@@ -122,7 +122,7 @@
             <h1 class="text-center mb-5" style="color: #1b8492c7;">Add New Vehicle Request</h1>
 
             <div class="card p-4 rounded-4 shadow-lg" style="max-width: 600px; width: 100%;">
-                <form>
+                <form id="addVehicleForm">
                     <div class="mb-3">
                         <label for="ownerName" class="form-label">Owner Name</label>
                         <input type="text" class="form-control" id="ownerName" value="Nick" disabled>
@@ -153,7 +153,7 @@
                         <input type="text" class="form-control" id="modelName" placeholder="e.g., Swift">
                     </div>
                   
-                    <a href="./vehicle-entry.html" type="submit" class="btn btn-primary" style="background-color: #1b8492c7; border: none; font-weight: bold;">Add Request</a>
+                    <button type="submit" class="btn btn-primary" style="background-color: #1b8492c7; border: none; font-weight: bold;">Add Request</button>
                      <a href="./vehicle-entry.html" type="button" class="btn btn-secondary" style="background-color: #1b8492c7; border: none; font-weight: bold;">Discard</a>
                 </form>
             </div>
@@ -162,5 +162,19 @@
     
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      // Simple submit handler: redirect to index.html and show toast there via URL param
+      (function(){
+        var form = document.getElementById('addVehicleForm');
+        if(!form) return;
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          var msg = 'Your vehicle request has been submitted successfully. We will review it shortly.';
+          // encode and redirect to index.html with message param (no persistence)
+          var target = '../index.html?toast=1&msg=' + encodeURIComponent(msg);
+          window.location.href = target;
+        });
+      })();
+    </script>
 </body>
 </html>

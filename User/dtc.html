@@ -256,14 +256,16 @@
             
             <div class="card p-4 shadow-lg query-card">
                 <div class="card-body">
-                    <div class="mb-4">
-                        <textarea class="form-control" rows="10" placeholder="Write Your Query Here...."></textarea>
-                    </div>
-                    <div class="text-center">
-                        <p style="color: #921b1bac;"><sup>*</sup>Your query will be submitted for review and a member of the committee will contact you shortly.</p>
-                    
-                        <a href="../index.html" type="submit" class="btn btn-submit">Submit Query</a>
-                    </div>
+                    <form id="dtcForm">
+                        <div class="mb-4">
+                            <textarea class="form-control" id="queryText" rows="10" placeholder="Write Your Query Here...."></textarea>
+                        </div>
+                        <div class="text-center">
+                            <p style="color: #921b1bac;"><sup>*</sup>Your query will be submitted for review and a member of the committee will contact you shortly.</p>
+                        
+                            <button type="submit" class="btn btn-submit">Submit Query</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </main>
@@ -325,5 +327,19 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // Simple submit handler: redirect to index.html and show toast there via URL param
+      (function(){
+        var form = document.getElementById('dtcForm');
+        if(!form) return;
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          var msg = 'Your query has been submitted to the committee. A member will contact you shortly.';
+          // encode and redirect to index.html with message param (no persistence)
+          var target = '../index.html?toast=1&msg=' + encodeURIComponent(msg);
+          window.location.href = target;
+        });
+      })();
+    </script>
   </body>
 </html>
