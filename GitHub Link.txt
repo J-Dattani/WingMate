@@ -1,0 +1,12 @@
+REPO LINK
+
+https://github.com/J-Dattani/WingMate
+
+
+USER LOGIN
+
+https://j-dattani.github.io/WingMate/User/login.html
+
+ADMIN LOGIN
+
+https://j-dattani.github.io/WingMate/Admin/login.html
