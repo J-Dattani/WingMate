@@ -126,32 +126,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script>
-        // Admin login client-side validation (no backend)
-        (function(){
-            const form = document.getElementById('adminLoginForm');
-            const feedback = document.getElementById('adminLoginFeedback');
-            const ADMIN = { username: 'admin', password: '@Admin123' };
-
-            form.addEventListener('submit', function(e){
-                e.preventDefault();
-                feedback.textContent = '';
-                const u = document.getElementById('usernameInput').value.trim();
-                const p = document.getElementById('passwordInput').value;
-
-                if(!u || !p){
-                    feedback.textContent = 'Please enter username and password.';
-                    return;
-                }
-
-                if(u === ADMIN.username && p === ADMIN.password){
-                    window.location.href = './Dashboard.html';
-                } else {
-                    feedback.textContent = 'Incorrect admin username or password.';
-                }
-            });
-        })();
-    </script>
+    <script src="./js/login.js"></script>
 </body>
 
 </html>

@@ -260,27 +260,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-          <script>
-            // Simple submit handler: redirect to Admin Dashboard and show toast there via URL param
-            (function(){
-              var form = document.getElementById('raiseForm');
-              if(!form) return;
-              form.addEventListener('submit', function(e){
-                e.preventDefault();
-                var categoryEl = document.getElementById('category');
-                var messageEl = document.getElementById('message');
-                var category = '';
-                if(categoryEl && categoryEl.value && categoryEl.value !== 'Select Category'){
-                  category = categoryEl.options[categoryEl.selectedIndex].text;
-                } else {
-                  category = 'General';
-                }
-                var msg = 'Thank you for contacting us regarding ' + category + '. We will answer soon.';
-                // encode and redirect to index.html with message param (no persistence)
-                var target = '../index.html?toast=1&msg=' + encodeURIComponent(msg);
-                window.location.href = target;
-              });
-            })();
-          </script>
+          <script src="./js/raise-complaint.js"></script>
   </body>
 </html>

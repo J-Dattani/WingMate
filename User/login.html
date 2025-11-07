@@ -157,33 +157,6 @@
       xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script>
-      // Client-side login validation for user side
-      (function(){
-        const form = document.getElementById('loginForm');
-        const feedback = document.getElementById('loginFeedback');
-        // test credentials (no backend)
-        const TEST_USER = { username: 'JD@gmail.com', password: 'JD@mu033' };
-
-        form.addEventListener('submit', function(e){
-          e.preventDefault();
-          feedback.textContent = '';
-          const u = document.getElementById('usernameInput').value.trim();
-          const p = document.getElementById('passwordInput').value;
-
-          if(!u || !p){
-            feedback.textContent = 'Please enter username and password.';
-            return;
-          }
-
-          if(u === TEST_USER.username && p === TEST_USER.password){
-            // success - redirect to main index (user)
-            window.location.href = '../index.html';
-          } else {
-            feedback.textContent = 'Incorrect username or password.';
-          }
-        });
-      })();
-    </script>
+    <script src="./js/login.js"></script>
   </body>
 </html>

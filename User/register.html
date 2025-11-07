@@ -179,56 +179,6 @@
     </div>
     <!-- Bootstrap JS CDN (optional, but good practice to include for certain components) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-        // Registration form validation (password strength and required fields)
-        (function(){
-            const form = document.getElementById('registerForm');
-            const feedback = document.getElementById('registerFeedback');
-
-            function validatePassword(pw){
-                // At least 8 chars, one uppercase, one lowercase, one digit, one special char
-                const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
-                return re.test(pw);
-            }
-
-            form.addEventListener('submit', function(e){
-                e.preventDefault();
-                feedback.textContent = '';
-                const owner = document.getElementById('ownerNameInput').value.trim();
-                const wing = document.getElementById('wingInput').value.trim();
-                const floor = document.getElementById('floorInput').value.trim();
-                const block = document.getElementById('blockInput').value.trim();
-                const phone = document.getElementById('phoneInput').value.trim();
-                const email = document.getElementById('emailInput').value.trim();
-                const pw = document.getElementById('createPasswordInput').value;
-                const pw2 = document.getElementById('confirmPasswordInput').value;
-
-                if(!owner || !wing || !floor || !block){
-                    feedback.textContent = 'Please fill Owner Name, Wing, Floor and Block.';
-                    return;
-                }
-                if(!/^[0-9]{10}$/.test(phone)){
-                    feedback.textContent = 'Please enter a valid 10-digit phone number.';
-                    return;
-                }
-                if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
-                    feedback.textContent = 'Please enter a valid email address.';
-                    return;
-                }
-                if(pw !== pw2){
-                    feedback.textContent = 'Passwords do not match.';
-                    return;
-                }
-                if(!validatePassword(pw)){
-                    feedback.innerHTML = 'Password must be at least 8 characters and include uppercase, lowercase, number and a special character.';
-                    return;
-                }
-
-                // No backend: simulate success and redirect to login
-                alert('Request submitted locally (no backend). You can now login with the provided credentials.');
-                window.location.href = 'login.html';
-            });
-        })();
-    </script>
+    <script src="./js/register.js"></script>
 </body>
 </html>
