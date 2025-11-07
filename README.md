@@ -37,7 +37,7 @@ The application is built with a focus on **simplicity and efficiency**, aiming t
 ## Project Status
 - **Semester:** 3  
 - **Course:** Web Technology (WT)  
-- **Status:** 🚧 In Development  
+- **Status:** Completed 
 
 ---
 
